@@ -3,6 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
+var user=null;
 angular.module('myApp', ['ionic',"myApp.doLogin",'content.controllers'])
 
 .run(function($ionicPlatform) {
@@ -27,7 +28,6 @@ angular.module('myApp', ['ionic',"myApp.doLogin",'content.controllers'])
       })
       .state('home', {
         url: '/home',
-
         templateUrl: 'content/index.html'
 
       })
@@ -37,40 +37,51 @@ angular.module('myApp', ['ionic',"myApp.doLogin",'content.controllers'])
       templateUrl: 'templates/menu.html'
     })
 
-      .state('app.search', {
-        url: '/search',
+      .state('app.grxx', {
+        url: '/grxx',
         views: {
           'menuContent': {
-            templateUrl: 'templates/search.html'
+            templateUrl: 'templates/grxx.html',
+            controller:'grxx'
+          }
+        }
+      })
+      .state('app.gsygxx', {
+        url: '/gsygxx',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/gsygxx.html',
+            controller:'gsygxx'
           }
         }
       })
 
-      .state('app.browse', {
-        url: '/browse',
+      .state('app.grewm', {
+        url: '/grewm',
         views: {
           'menuContent': {
-            templateUrl: 'templates/browse.html'
+            templateUrl: 'templates/grewm.html',
+            controller:'grewm'
           }
         }
       })
-      .state('app.playlists', {
-        url: '/playlists',
+      .state('app.renwu', {
+        url: '/renwu',
         views: {
           'menuContent': {
-            templateUrl: 'templates/playlists.html',
-            controller: 'PlaylistsCtrl'
+            templateUrl: 'templates/renwu.html',
+            controller: 'renwu'
 
           }
         }
       })
 
-      .state('app.single', {
-        url: '/playlists/:playlistId',
+      .state('app.renwuxq', {
+        url: '/renwuxq/:rwId',
         views: {
           'menuContent': {
-            templateUrl: 'templates/playlist.html',
-            controller: 'PlaylistCtrl'
+            templateUrl: 'templates/renwuxq.html',
+            controller: 'renwuxq'
 
           }
         }

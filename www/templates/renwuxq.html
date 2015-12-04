@@ -1,0 +1,26 @@
+<ion-view view-title="任务详情">
+  <ion-content>
+   <!-- <h1>任务详情</h1>-->
+    <ion-list>
+      <ion-item>
+       任务类型： {{rw.type}}
+      </ion-item>
+      <ion-item>
+        任务标题：{{rw.title}}
+      </ion-item>
+      <ion-item>
+       任务内容:{{rw.content}}
+
+      </ion-item>
+
+      <ion-item>
+        任务发布人:{{rw.createUser}}
+      </ion-item>
+
+      <ion-item>
+        最迟完成时间:{{rw.createTimeEnd|date:'yyyy-MM-dd HH:mm:ss'}}
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

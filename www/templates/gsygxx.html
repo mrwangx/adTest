@@ -1,0 +1,9 @@
+<ion-view view-title="公司员工列表">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="yg in gsyg">
+       <a class="button button-full button-positive"  href="tel:{{yg.phone}}" >拨打 : {{yg.name}} 电话</a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
